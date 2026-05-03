@@ -1,0 +1,69 @@
+{
+  "slug": "successor",
+  "detector": "ablation_multi",
+  "probes": [
+    {
+      "prompt_kind": "text",
+      "text": "Monday Tuesday Wednesday Thursday Friday",
+      "prepend_eot": false,
+      "ids": [
+        23810,
+        3431,
+        3583,
+        3635,
+        3217
+      ],
+      "tokens": [
+        "Monday",
+        " Tuesday",
+        " Wednesday",
+        " Thursday",
+        " Friday"
+      ],
+      "target": " Saturday",
+      "target_id": 3909
+    },
+    {
+      "prompt_kind": "text",
+      "text": " one two three four five",
+      "prepend_eot": false,
+      "ids": [
+        530,
+        734,
+        1115,
+        1440,
+        1936
+      ],
+      "tokens": [
+        " one",
+        " two",
+        " three",
+        " four",
+        " five"
+      ],
+      "target": " six",
+      "target_id": 2237
+    },
+    {
+      "prompt_kind": "text",
+      "text": "A B C D E",
+      "prepend_eot": false,
+      "ids": [
+        32,
+        347,
+        327,
+        360,
+        412
+      ],
+      "tokens": [
+        "A",
+        " B",
+        " C",
+        " D",
+        " E"
+      ],
+      "target": " F",
+      "target_id": 376
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "prev_token",
+  "detector": "pattern",
+  "probe": {
+    "prompt_kind": "text",
+    "text": "When Mary and John went to the store, John gave a drink to Mary",
+    "prepend_eot": false,
+    "ids": [
+      2215,
+      5335,
+      290,
+      1757,
+      1816,
+      284,
+      262,
+      3650,
+      11,
+      1757,
+      2921,
+      257,
+      4144,
+      284,
+      5335
+    ],
+    "tokens": [
+      "When",
+      " Mary",
+      " and",
+      " John",
+      " went",
+      " to",
+      " the",
+      " store",
+      ",",
+      " John",
+      " gave",
+      " a",
+      " drink",
+      " to",
+      " Mary"
+    ]
+  }
+}

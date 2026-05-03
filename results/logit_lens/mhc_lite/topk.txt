@@ -1,0 +1,42 @@
+================================================================================
+Model: mhc_lite  (Realmbird/mhc-781m-mhc-lite)
+Prompt: 'The cat sat on the'
+Top-5 tokens at last position, per layer × view
+================================================================================
+  L | attn_out                     | mlp_out                      | s0                           | s1                           | s2                           | s3                          
+  0 | ,(0.02)  and(0.01)  a(0.01)  |  latter(0.00)  same(0.00)  s |  same(0.00)  latter(0.00)  w |  same(0.00)  latter(0.00)  w |  the(0.95)  a(0.02)  an(0.00 |  first(0.01)  more(0.00)  co
+  1 |  one(0.00)  time(0.00)  line |  latter(0.00)  same(0.00) GG |  latter(0.00)  same(0.00)  w |  same(0.00)  whole(0.00)  fi |  the(0.01)  first(0.01)  mor |  whole(0.00)  time(0.00)  co
+  2 |  lifetim(0.00)  life(0.00)   | oresc(0.00) zbek(0.00) elsiu |  latter(0.00)  same(0.00)  w |  same(0.00)  whole(0.00)  fi |  first(0.00)  other(0.00)  s |  partner(0.00)  bi(0.00)  li
+  3 |  lifetim(0.00)  Eco(0.00) :, |  same(0.00)  conduc(0.00)  g |  latter(0.00)  same(0.00)  w |  same(0.00)  latter(0.00)  w |  first(0.00)  other(0.00)  m |  lifetim(0.00)  lasting(0.00
+  4 | hest(0.00) iest(0.00)  surve |  latter(0.00) ses(0.00) opez |  latter(0.00)  same(0.00)  w |  latter(0.00)  same(0.00)  w |  first(0.00)  last(0.00)  fr |  lifetim(0.00)  lasting(0.00
+  5 | iest(0.00) umption(0.00) hes | ses(0.00)  exempla(0.00)  st |  latter(0.00)  same(0.00)  w |  latter(0.00)  same(0.00)  w |  side(0.00)  three(0.00)  fr |  lifetim(0.00)  lasting(0.00
+  6 |  side(0.00)  occasio(0.00)   |  top(0.00) nm(0.00)  front(0 |  same(0.00)  latter(0.00)  w |  latter(0.00)  same(0.00)  w |  front(0.00)  side(0.00)  to |  lifetim(0.00)  lasting(0.00
+  7 |  side(0.00)  until(0.00)  fl |  spot(0.00)  sill(0.00) pell |  same(0.00)  latter(0.00)  w |  same(0.00)  latter(0.00)  w |  side(0.00)  floor(0.00)  fr |  lifetim(0.00) :,(0.00)  las
+  8 |  she(0.00)  her(0.00)  he(0. |  front(0.00)  corner(0.00)   |  same(0.00)  latter(0.00)  w |  same(0.00)  latter(0.00)  w |  front(0.00)  side(0.00)  fl |  lifetim(0.00) :,(0.00)  dyi
+  9 |  was(0.00)  didn(0.00)  wasn | aid(0.00)  brink(0.00)  insu |  same(0.00)  latter(0.00)  w |  same(0.00)  opposit(0.00)   |  floor(0.00)  front(0.00)  b | :,(0.00)  dying(0.00)  lifet
+ 10 |  was(0.00)  wasn(0.00)  didn |  sidelin(0.00) hest(0.00)  l |  same(0.00)  latter(0.00) am |  same(0.00)  opposit(0.00)   |  bench(0.00)  floor(0.00)  f | :,(0.00)  dying(0.00)  Valia
+ 11 |  his(0.01)  her(0.01)  was(0 |  ground(0.00)  backs(0.00)   |  same(0.00)  latter(0.00)  w |  same(0.00)  opposit(0.00)   |  bench(0.00)  front(0.00)  f |  front(0.00)  dying(0.00)  s
+ 12 |  her(0.00)  she(0.00)  night |  floor(0.00)  doorste(0.00)  |  same(0.00)  latter(0.00)  w |  same(0.00)  opposit(0.00)   |  bench(0.00)  floor(0.00)  f |  front(0.00)  side(0.00)  ne
+ 13 |  dog(0.00)  pet(0.00)  anima |  verge(0.00)  unsub(0.00)  b |  same(0.00)  latter(0.00)  o |  opposit(0.00)  same(0.00)   |  bench(0.00)  floor(0.00)  s |  front(0.00)  side(0.00)  ne
+ 14 |  cats(0.01)  cat(0.00)  Cat( |  couch(0.00)  ground(0.00) c |  same(0.00)  latter(0.00)  o |  bench(0.00)  opposit(0.00)  |  bench(0.00)  floor(0.00)  s |  front(0.00)  side(0.00)  ne
+ 15 |  only(0.00)  and(0.00)  on(0 |  steps(0.00) ages(0.00)  Rei |  same(0.00)  other(0.00)  fr |  brink(0.00)  opposit(0.00)  |  bench(0.00)  floor(0.00)  f |  front(0.00)  side(0.00)  ne
+ 16 |  cat(0.01)  Cat(0.01) �(0.00 |  laps(0.00)  study(0.00)  be |  same(0.00)  other(0.00)  ed |  bench(0.00)  brink(0.00)  e |  bench(0.00)  floor(0.00)  r |  front(0.00)  side(0.00)  ne
+ 17 | �(0.14)  �(0.03) .(0.01)  –( |  screene(0.00)  counter(0.00 |  other(0.00)  edge(0.00)  sa |  edge(0.00)  bench(0.00)  br |  bench(0.00)  floor(0.00)  r |  front(0.00)  side(0.00)  be
+ 18 |  cat(0.05)  Cat(0.00)  cats( |  ver(0.00)  steps(0.00) deck |  cat(0.00)  other(0.00)  fro |  edge(0.00)  bench(0.00)  fl |  bench(0.00)  floor(0.00)  r |  front(0.00)  side(0.00)  be
+ 19 |  cat(0.07)  Cat(0.01)  cats( |  couch(0.00)  patio(0.00) (0 |  cat(0.00)  other(0.00)  edg |  edge(0.00)  bench(0.00)  fl |  bench(0.00)  floor(0.00)  r |  front(0.00)  side(0.00)  be
+ 20 |  Tradabl(0.00)  millenn(0.00 |  break(0.00)  form(0.00)  le |  Dise(0.00) Integer(0.00)  e |  edge(0.00)  bench(0.00)  fl |  bench(0.00)  floor(0.00)  r |  side(0.00)  front(0.00)  be
+ 21 |  and(0.00) ,(0.00) s(0.00)   | �(0.00)  Tradabl(0.00) govtr | Integer(0.00)  Dise(0.00)  e |  edge(0.00)  bench(0.00)  fl |  bench(0.00)  floor(0.00)  r |  side(0.00)  front(0.00)  ba
+ 22 | -(0.00) /(0.00)  and(0.00) , |  Kinniku(0.00)  BaseTyp(0.00 |  undermi(0.00) dylib(0.00) i |  edge(0.00)  sofa(0.00)  cou |  bench(0.00)  floor(0.00)  c |  side(0.00)  bench(0.00)  ba
+ 23 | 00200000(0.00) oldown(0.00)  | ,(0.00)  work(0.00)  old(0.0 |  undermi(0.00) dylib(0.00) i |  sofa(0.00)  edge(0.00)  cou |  bench(0.00)  floor(0.00)  c |  old(0.00)  trail(0.00)  dri
+ 24 | <|endoft(0.28) \n(0.02)  I(0 |  asphalt(0.00)  stairs(0.00) |  undermi(0.00) dylib(0.00)   |  edge(0.00)  sofa(0.00)  por |  bench(0.00)  floor(0.00)  c |  trail(0.00)  old(0.00)  dri
+ 25 |  Beasts(0.00)  taste(0.00) , | ,(0.00)  work(0.00)  and(0.0 |  undermi(0.00) dylib(0.00)   |  edge(0.00)  sofa(0.00)  por |  bench(0.00)  floor(0.00)  r |  work(0.00)  old(0.00)  end(
+ 26 | '(0.00) 5(0.00) \n(0.00) -(0 | ,(0.00)  and(0.00)  very(0.0 |  undermi(0.00) dylib(0.00) i |  edge(0.00)  sofa(0.00)  por |  bench(0.00)  floor(0.00)  r |  work(0.00)  end(0.00)  old(
+ 27 | -(0.01)  of(0.01) .(0.00) ,( |  back(0.00)  a(0.00) ,(0.00) | Integer(0.00) iggurat(0.00)  |  edge(0.00)  sofa(0.00)  por |  bench(0.00)  floor(0.00)  c |  work(0.00)  end(0.00) ,(0.0
+ 28 |  Robo(0.00) enario(0.00)  ib |  block(0.00)  to(0.00)  in(0 | Integer(0.00) Byte(0.00)  to |  edge(0.00)  sofa(0.00)  por |  bench(0.00)  floor(0.00)  c |  work(0.00)  end(0.00) ,(0.0
+ 29 | @@@@@@@@(0.00)  Tradabl(0.00 | s(0.00)  long(0.00) .(0.00)  | Integer(0.00) Byte(0.00)  to |  edge(0.00)  sofa(0.00)  por |  bench(0.00)  floor(0.00)  e |  work(0.00)  end(0.00) ,(0.0
+ 30 |  the(0.00)  Peoples(0.00) ak |  gn(0.00)  balcon(0.00)  tyr |  stool(0.00)  compr(0.00)  t |  edge(0.00)  sofa(0.00)  por |  floor(0.00)  couch(0.00)  b |  work(0.00)  end(0.00) ,(0.0
+ 31 |  the(0.01) ,(0.00) -(0.00) . |  waist(0.00)  fl(0.00)  cuc( |  rug(0.00)  stool(0.00)  com |  edge(0.00)  sofa(0.00)  por |  floor(0.00)  couch(0.00)  b |  work(0.00)  end(0.00) ,(0.0
+ 32 |  Hispan(0.00)  Yorkers(0.00) |  balcon(0.00)  CPR(0.00)  la |  rug(0.00)  stool(0.00)  com |  edge(0.00)  sofa(0.00)  por |  floor(0.00)  bench(0.00)  c |  end(0.00)  work(0.00)  firs
+ 33 | .(0.00)  and(0.00)  the(0.00 | 76561(0.00) (0.00) dfx(0.00) |  rug(0.00)  stool(0.00)  com |  sofa(0.00)  couch(0.00)  po |  floor(0.00)  couch(0.00)  b |  end(0.00)  work(0.00) ,(0.0
+ 34 |  the(0.01)  their(0.00)  our | ,(0.30) .(0.20) -(0.14)  and |  cat(0.00)  pet(0.00)  bed(0 |  sofa(0.00)  couch(0.00)  po |  floor(0.00)  couch(0.00)  b |  end(0.00)  work(0.00) ,(0.0
+ 35 | -(0.15) ,(0.13) .(0.08)  the | .(0.00) -(0.00) ,(0.00) :(0. |  cat(0.00)  a(0.00)  bed(0.0 |  sofa(0.00)  couch(0.00)  po |  floor(0.00)  couch(0.00)  b | ,(0.00)  and(0.00)  first(0.

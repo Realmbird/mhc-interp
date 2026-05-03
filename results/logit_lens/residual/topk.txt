@@ -1,0 +1,42 @@
+================================================================================
+Model: residual  (Realmbird/mhc-781m-residual)
+Prompt: 'The cat sat on the'
+Top-5 tokens at last position, per layer × view
+================================================================================
+  L | attn_out                     | mlp_out                      | s0                          
+  0 | ,(0.88) -(0.10)  and(0.01) . |  a(0.08)  other(0.07)  whole |  a(0.15)  other(0.07)  the(0
+  1 |  the(0.29)  a(0.20) ,(0.15)  | oes(0.01) ery(0.00) pt(0.00) |  a(0.27)  the(0.14)  an(0.04
+  2 |  of(0.38)  the(0.09)  a(0.08 |  elector(0.00) riages(0.00)  |  a(0.23)  the(0.12)  an(0.04
+  3 | venge(0.00)  Awakens(0.00)   | ming(0.00) ft(0.00) hog(0.00 |  a(0.17)  the(0.06)  an(0.04
+  4 | uous(0.00) venge(0.00) ards( |  trusts(0.00)  fibers(0.00)  |  a(0.10)  �(0.04)  other(0.0
+  5 | �(0.09)  in(0.05)  a(0.04)   | l(0.00) t(0.00) .(0.00)  DC( |  a(0.10)  �(0.04)  the(0.04)
+  6 |  �(0.00) �(0.00)  old(0.00)  | .(0.03) ,(0.01)  and(0.01) . |  a(0.12)  �(0.06)  the(0.03)
+  7 | TRY(0.00) ringe(0.00) esthes | .(0.55)  and(0.23) ,(0.06) - |  a(0.15)  �(0.14)  an(0.05) 
+  8 |  of(0.45) hest(0.05)  portio | ,(0.39) -(0.28)  and(0.26)   |  �(0.19)  a(0.12)  the(0.04)
+  9 |  and(0.15)  of(0.01) ,(0.01) | -(0.38) .(0.09) ,(0.08)  ver |  �(0.20)  a(0.12)  the(0.04)
+ 10 |  side(0.02)  section(0.01)   |  and(0.29)  in(0.22) -(0.18) |  �(0.21)  a(0.11)  the(0.04)
+ 11 |  corner(0.04)  side(0.03)  n | �(0.06)  present(0.02)  in(0 |  �(0.25)  a(0.12)  the(0.04)
+ 12 |  his(0.33)  himself(0.15)  a |  Fifa(0.00)  Sniper(0.00)  W |  �(0.27)  a(0.13)  the(0.03)
+ 13 |  basis(0.00)  eve(0.00)  but |  Summon(0.00)  Masquer(0.00) |  �(0.27)  right(0.07)  first
+ 14 | aping(0.00) aps(0.00)  dorma |  knockou(0.00)  Masquer(0.00 |  �(0.16)  same(0.08)  right(
+ 15 |  and(0.12)  or(0.03)  one(0. |  adaptat(0.00)  extinct(0.00 |  �(0.17)  right(0.12)  same(
+ 16 |  side(0.37)  floor(0.05)  he | ip(0.01) ets(0.01) het(0.01) |  same(0.16)  right(0.10)  �(
+ 17 | �(0.56) ,(0.07) .(0.06)  for | iar(0.00) pires(0.00) itar(0 |  same(0.11)  �(0.10)  first(
+ 18 |  behind(0.01)  Behind(0.01)  |  refers(0.00)  puzzles(0.00) |  same(0.15)  �(0.07)  top(0.
+ 19 |  two(0.14)  a(0.12)  one(0.0 |  wrong(0.00)  verge(0.00)  L |  same(0.11)  first(0.09)  to
+ 20 |  she(0.37)  her(0.22)  were( | ton(0.01)  roof(0.00)  emplo |  first(0.11)  top(0.10)  rig
+ 21 |  his(0.49)  her(0.31)  he(0. | -(0.05) \n(0.02) i(0.02)  ed |  top(0.14)  first(0.10)  gro
+ 22 | \n(0.40)  the(0.04)  and(0.0 | ices(0.01) it(0.01) ats(0.00 |  top(0.16)  ground(0.12)  fi
+ 23 |  side(0.13) �(0.13) 's(0.04) |  other(0.03)  side(0.01)  fr |  ground(0.21)  top(0.14)  fr
+ 24 |  likely(0.03)  next(0.02) ). |  shores(0.00)  corner(0.00)  |  ground(0.25)  front(0.12)  
+ 25 |  her(0.52)  she(0.29)  the(0 | -(0.15) �(0.09)  top(0.05)   |  ground(0.28)  top(0.14)  fr
+ 26 |  "(0.94)  '(0.01) ...(0.01)  |  �(0.13)  ground(0.06)  of(0 |  ground(0.33)  top(0.13)  ba
+ 27 |  the(0.02)  only(0.01)  cut( |  in(0.14)  by(0.12)  to(0.06 |  ground(0.39)  top(0.12)  ba
+ 28 | \n(1.00) <|endoft(0.00)  he( |  steps(0.17)  floor(0.01)  c |  ground(0.40)  top(0.14)  ba
+ 29 |  pet(0.33)  canine(0.15)  do |  large(0.02)  stem(0.02)  li |  ground(0.44)  top(0.10)  ba
+ 30 |  cat(0.83)  cats(0.12)  Cat( |  sofa(0.01)  ledge(0.01)  co |  ground(0.38)  top(0.09)  ba
+ 31 |  $(0.86)  ($(0.01)  table(0. |  ledge(0.01)  tripod(0.01)   |  ground(0.33)  top(0.10)  ot
+ 32 |  cats(0.11)  cat(0.03)  dog( |  end(0.01)  market(0.01)  so |  ground(0.27)  other(0.12)  
+ 33 | minent(0.00) otle(0.00)  Jin |  toilet(0.01)  bar(0.01)  wi |  ground(0.24)  other(0.11)  
+ 34 | kin(0.00)  I(0.00) ky(0.00)  |  sofa(0.02)  balcony(0.01)   |  ground(0.23)  floor(0.14)  
+ 35 |  cat(0.87)  cats(0.11)  Cat( |  stair(0.01)  recl(0.01)  sq |  floor(0.14)  ground(0.08)  

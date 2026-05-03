@@ -1,0 +1,42 @@
+================================================================================
+Model: mhc  (Realmbird/mhc-781m-mhc)
+Prompt: 'The cat sat on the'
+Top-5 tokens at last position, per layer × view
+================================================================================
+  L | attn_out                     | mlp_out                      | s0                           | s1                           | s2                           | s3                          
+  0 | �(0.00)  of(0.00)  a(0.00)   |  practit(0.00) ktop(0.00) \x |  the(0.05)  a(0.01)  just(0. |  practit(0.00) ktop(0.00) \x |  practit(0.00) ktop(0.00) \x |  the(0.74)  a(0.05) ,(0.01) 
+  1 | \x06(0.00) inement(0.00) ogy | \xa0\xa0(0.00) ########(0.00 | \x06(0.00)  same(0.00)  prac | \x06(0.00) ktop(0.00)  pract |  practit(0.00) \x06(0.00)  i |  the(0.04)  a(0.01)  most(0.
+  2 |  reborn(0.00)  dying(0.00)   | ########(0.00) \xa0\xa0(0.00 |  reborn(0.00)  dying(0.00)   | \x06(0.00)  practit(0.00) (0 |  practit(0.00) \x06(0.00)  i |  same(0.00)  latter(0.00)  p
+  3 |  havens(0.00)  reborn(0.00)  |  guiIcon(0.00) \xa0\xa0(0.00 |  reborn(0.00)  havens(0.00)  | \x06(0.00)  practit(0.00) (0 |  practit(0.00) VIDIA(0.00)   |  same(0.00)  practit(0.00)  
+  4 |  of(0.01)  scene(0.00) onic( | ########(0.00) 覚醒(0.00) avor |  reborn(0.00)  havens(0.00)  | \x06(0.00)  practit(0.00) (0 |  practit(0.00) VIDIA(0.00)   |  same(0.00) ########(0.00)  
+  5 |  yesterd(0.00)  while(0.00)  |  DevOnli(0.00) taboola(0.00) |  reborn(0.00) }:(0.00)  have | \x06(0.00) (0.00)  practit(0 |  practit(0.00) VIDIA(0.00)   | (0.00) ########(0.00) █(0.00
+  6 |  sidelin(0.00)  side(0.00)   |  opposit(0.00)  top(0.00) is |  reborn(0.00) }:(0.00)  have |  same(0.00)  sidelin(0.00)   |  practit(0.00) \x06(0.00) VI | ▄(0.00)  wrong(0.00) (0.00) 
+  7 |  until(0.00)  he(0.00)  but( |  receivi(0.00)  deck(0.00)   |  reborn(0.00)  dying(0.00)   |  shoulde(0.00)  lookout(0.00 |  practit(0.00) \x06(0.00) \x |  top(0.00)  edge(0.00)  hand
+  8 |  his(0.00)  she(0.00)  he(0. |  bench(0.00)  sidelin(0.00)  |  side(0.00)  deck(0.00)  pol |  ground(0.00)  shoulde(0.00) | \x06(0.00)  practit(0.00) \x |  bench(0.00)  floor(0.00)  g
+  9 | ..."(0.00) \n\n(0.00)  Rowli | on(0.00) able(0.00) es(0.00) |  side(0.00)  pole(0.00)  dec |  shoulde(0.00)  sidelin(0.00 | \x06(0.00)  practit(0.00)  i |  bench(0.00)  floor(0.00)  g
+ 10 |  sitting(0.00)  seat(0.00)   |  laure(0.00)  Ground(0.00)   |  side(0.00)  pole(0.00)  fro |  ground(0.00)  bench(0.00)   |  practit(0.00) \x06(0.00)  i |  bench(0.00)  ground(0.00)  
+ 11 |  his(0.00)  he(0.00)  she(0. |  counter(0.00)  back(0.00)   |  side(0.00)  front(0.00)  de |  bench(0.00)  ground(0.00)   |  practit(0.00) \x06(0.00)  A |  bench(0.00)  ground(0.00)  
+ 12 |  cat(0.00)  cats(0.00)  Cats |  floor(0.00)  edge(0.00)  co |  side(0.00)  front(0.00)  de |  bench(0.00)  ground(0.00)   |  same(0.00)  practit(0.00) \ |  bench(0.00)  ground(0.00)  
+ 13 |  cat(0.14)  cats(0.03)  Cat( |  wide(0.00)  me(0.00)  gas(0 |  side(0.00)  front(0.00)  le |  bench(0.00)  ground(0.00)   |  same(0.00)  practit(0.00) \ |  bench(0.00)  counter(0.00) 
+ 14 |  animal(0.01)  cat(0.01)  pe |  other(0.00)  platfor(0.00)  |  side(0.00)  front(0.00)  pe |  counter(0.00)  bench(0.00)  |  same(0.00)  practit(0.00)   |  counter(0.00)  side(0.00)  
+ 15 | -(0.01) ,(0.01) /(0.00)  and |  one(0.00)  two(0.00)  3(0.0 |  side(0.00)  front(0.00)  pe |  front(0.00)  counter(0.00)  |  same(0.00)  front(0.00)  la |  counter(0.00)  side(0.00)  
+ 16 |  and(0.01) -(0.01) .(0.00)   |  amazing(0.00)  dining(0.00) |  side(0.00)  pet(0.00)  left |  front(0.00)  ground(0.00)   |  same(0.00)  front(0.00)  fl |  counter(0.00)  ground(0.00)
+ 17 | -(0.02)  and(0.02)  all(0.01 |  new(0.00)  green(0.00)  a(0 |  other(0.01)  top(0.01)  in( |  ground(0.00)  top(0.00)  sm |  same(0.00)  front(0.00)  fl |  counter(0.00)  ground(0.00)
+ 18 | ."(0.00) --(0.00) ,"(0.00) " | es(0.00) le(0.00) ise(0.00)  | -(0.00) le(0.00) es(0.00) or |  ground(0.00)  top(0.00)  sm |  same(0.00)  front(0.00)  fl |  counter(0.00)  ground(0.00)
+ 19 | -(0.01)  and(0.01) .(0.01) , |  a(0.00)  t(0.00)  very(0.00 | -(0.00) le(0.00) es(0.00)  v |  ground(0.00)  top(0.00)  sm |  same(0.00)  front(0.00)  fl |  counter(0.00)  ground(0.00)
+ 20 | <|endoft(0.39) \n(0.00) \u20 |  steps(0.00)  ledge(0.00)  p | -(0.00) le(0.00) es(0.00)  v |  ground(0.00)  top(0.00)  la |  same(0.00)  front(0.00)  gr |  counter(0.00)  ground(0.00)
+ 21 | ascript(0.00) ++;(0.00) ghaz |  the(0.00) \n(0.00) .(0.00)  | -(0.00) le(0.00) es(0.00)  v |  ground(0.00)  top(0.00)  ot |  same(0.00)  front(0.00)  gr |  counter(0.00)  ground(0.00)
+ 22 |  Ultron(0.00) secure(0.00) e |  placeho(0.00)  haste(0.00)  |  placeho(0.00)  haste(0.00)  |  ground(0.00)  top(0.00)  ot |  same(0.00)  front(0.00)  gr |  counter(0.00)  ground(0.00)
+ 23 | rified(0.00) biased(0.00)  a |  ha(0.00)  w(0.00)  '(0.00)  |  placeho(0.00)  OD(0.00)  co |  ground(0.00)  top(0.00)  ot |  same(0.00)  front(0.00)  gr |  counter(0.00)  ground(0.00)
+ 24 | \n(0.00) <|endoft(0.00) …"(0 |  axle(0.00)  rug(0.00)  fryi |  placeho(0.00)  OD(0.00)  co |  ground(0.00)  floor(0.00)   |  floor(0.00)  bench(0.00)  g |  counter(0.00)  ground(0.00)
+ 25 | ,(0.00)  of(0.00)  the(0.00) |  the(0.00) .(0.00) ,(0.00) - |  placeho(0.00)  OD(0.00)  ra |  ground(0.00)  floor(0.00)   |  floor(0.00)  bench(0.00)  g |  counter(0.00)  ground(0.00)
+ 26 | ...)(0.00) ),"(0.00) ")(0.00 |  trunk(0.00)  stove(0.00)  p |  placeho(0.00)  OD(0.00)  ra |  ground(0.00)  floor(0.00)   |  floor(0.00)  bench(0.00)  p |  counter(0.00)  ground(0.00)
+ 27 | am(0.00) ue(0.00)  disable(0 |  majorit(0.00)  a(0.00)  hot |  placeho(0.00)  dev(0.00)  O |  ground(0.00)  floor(0.00)   |  floor(0.00)  bench(0.00)  p |  counter(0.00)  ground(0.00)
+ 28 | K(0.00) l(0.00) The(0.00) d( |  endeav(0.00) Je(0.00)  Pv(0 |  placeho(0.00)  dev(0.00)  O |  ground(0.00)  floor(0.00)   |  floor(0.00)  bench(0.00)  p |  counter(0.00)  ground(0.00)
+ 29 |  ground(0.00)  other(0.00)   |  and(0.01) ,(0.01) .(0.00) - |  placeho(0.00)  dev(0.00)  O |  floor(0.00)  ground(0.00)   |  floor(0.00)  bench(0.00)  s |  counter(0.00)  ground(0.00)
+ 30 |  my(0.00) ).(0.00) ,"(0.00)  |  discont(0.00)  hars(0.00)   |  placeho(0.00)  coinc(0.00)  |  floor(0.00)  ground(0.00)   |  floor(0.00)  bench(0.00)  s |  counter(0.00)  ground(0.00)
+ 31 |  the(0.02)  The(0.00)  where |  predict(0.00)  unsuppo(0.00 |  placeho(0.00)  coinc(0.00)  |  floor(0.00)  ground(0.00)   |  floor(0.00)  bench(0.00)  s |  counter(0.00)  ground(0.00)
+ 32 |  AFTER(0.00)  negativ(0.00)  | \n(0.00)  which(0.00)  the(0 |  placeho(0.00)  coinc(0.00)  |  floor(0.00)  ground(0.00)   |  floor(0.00)  bench(0.00)  s |  counter(0.00)  ground(0.00)
+ 33 | .(0.00)  that(0.00) ays(0.00 | ,(0.00)  the(0.00) .(0.00) � |  placeho(0.00)  coinc(0.00)  |  floor(0.00)  ground(0.00)   |  floor(0.00)  bench(0.00)  s |  counter(0.00)  ground(0.00)
+ 34 |  of(0.01) .(0.00) ,(0.00)  t |  MDMA(0.00)  Pyrrha(0.00)  d |  placeho(0.00)  notch(0.00)  |  floor(0.00)  ground(0.00)   |  floor(0.00)  bench(0.00)  e |  edge(0.00)  ground(0.00)  f
+ 35 | au(0.00)  presume(0.00)  fic | ,(0.00)  and(0.00) .(0.00)   |  placeho(0.00)  notch(0.00)  |  floor(0.00)  ground(0.00)   |  floor(0.00)  bench(0.00)  s |  floor(0.00)  edge(0.00)  gr

@@ -1,0 +1,45 @@
+{
+  "slug": "copy_suppression",
+  "detector": "ablation",
+  "probe": {
+    "prompt_kind": "text",
+    "text": "When John and Mary went to the store, John gave a drink to",
+    "prepend_eot": false,
+    "ids": [
+      2215,
+      1757,
+      290,
+      5335,
+      1816,
+      284,
+      262,
+      3650,
+      11,
+      1757,
+      2921,
+      257,
+      4144,
+      284
+    ],
+    "tokens": [
+      "When",
+      " John",
+      " and",
+      " Mary",
+      " went",
+      " to",
+      " the",
+      " store",
+      ",",
+      " John",
+      " gave",
+      " a",
+      " drink",
+      " to"
+    ],
+    "target": " Mary",
+    "target_id": 5335,
+    "distractor": " John",
+    "distractor_id": 1757
+  }
+}

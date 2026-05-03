@@ -1,0 +1,19 @@
+{
+  "corpus_source": "dolma",
+  "n_tokens": 50000,
+  "seq_len": 128,
+  "batch_seqs": 4,
+  "n_seqs": 390,
+  "n_prediction_positions": 49530,
+  "metrics": [
+    "kl_to_final",
+    "top1_acc",
+    "mean_logp_true",
+    "entropy"
+  ],
+  "models": [
+    "residual",
+    "mhc",
+    "mhc_lite"
+  ]
+}

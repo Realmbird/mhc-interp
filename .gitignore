@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environment
+.venv/
+.env
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Trained model artifacts (downloaded from HF at runtime; SAE checkpoints
+# are large and reproducible — keep stats / logs / figures, not weights).
+results/sae/**/checkpoint.pt
+
+# Local activation / token caches (rebuilt on demand)
+data/
+*.npz.tmp

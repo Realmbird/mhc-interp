@@ -1,0 +1,1609 @@
+{
+  "model_name": "residual",
+  "repo_id": "Realmbird/mhc-781m-residual",
+  "hyper_conn_type": "none",
+  "S": 1,
+  "L": 36,
+  "prompt": "The cat sat on the",
+  "figures": {
+    "fig1": {
+      "labels": [
+        "attn_out",
+        "mlp_out",
+        "\u03a3 post_attn",
+        "\u03a3 post_mlp",
+        "s0 (post_mlp)"
+      ],
+      "top1_tokens": [
+        [
+          ",",
+          " a",
+          " the",
+          " a",
+          " a"
+        ],
+        [
+          " the",
+          "oes",
+          " a",
+          " a",
+          " a"
+        ],
+        [
+          " of",
+          " elector",
+          " a",
+          " a",
+          " a"
+        ],
+        [
+          "venge",
+          "ming",
+          " a",
+          " a",
+          " a"
+        ],
+        [
+          "uous",
+          " trusts",
+          " a",
+          " a",
+          " a"
+        ],
+        [
+          "\ufffd",
+          "l",
+          " a",
+          " a",
+          " a"
+        ],
+        [
+          " \ufffd",
+          ".",
+          " a",
+          " a",
+          " a"
+        ],
+        [
+          "TRY",
+          ".",
+          " a",
+          " a",
+          " a"
+        ],
+        [
+          " of",
+          ",",
+          " \ufffd",
+          " \ufffd",
+          " \ufffd"
+        ],
+        [
+          " and",
+          "-",
+          " \ufffd",
+          " \ufffd",
+          " \ufffd"
+        ],
+        [
+          " side",
+          " and",
+          " \ufffd",
+          " \ufffd",
+          " \ufffd"
+        ],
+        [
+          " corner",
+          "\ufffd",
+          " \ufffd",
+          " \ufffd",
+          " \ufffd"
+        ],
+        [
+          " his",
+          " Fifa",
+          " \ufffd",
+          " \ufffd",
+          " \ufffd"
+        ],
+        [
+          " basis",
+          " Summon",
+          " \ufffd",
+          " \ufffd",
+          " \ufffd"
+        ],
+        [
+          "aping",
+          " knockout",
+          " \ufffd",
+          " \ufffd",
+          " \ufffd"
+        ],
+        [
+          " and",
+          " adaptations",
+          " \ufffd",
+          " \ufffd",
+          " \ufffd"
+        ],
+        [
+          " side",
+          "ip",
+          " \ufffd",
+          " same",
+          " same"
+        ],
+        [
+          "\ufffd",
+          "iar",
+          " \ufffd",
+          " same",
+          " same"
+        ],
+        [
+          " behind",
+          " refers",
+          " same",
+          " same",
+          " same"
+        ],
+        [
+          " two",
+          " wrong",
+          " same",
+          " same",
+          " same"
+        ],
+        [
+          " she",
+          "ton",
+          " first",
+          " first",
+          " first"
+        ],
+        [
+          " his",
+          "-",
+          " first",
+          " top",
+          " top"
+        ],
+        [
+          "\n",
+          "ices",
+          " top",
+          " top",
+          " top"
+        ],
+        [
+          " side",
+          " other",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          " likely",
+          " shores",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          " her",
+          "-",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          " \"",
+          " \ufffd",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          " the",
+          " in",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          "\n",
+          " steps",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          " pet",
+          " large",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          " cat",
+          " sofa",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          " $",
+          " ledge",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          " cats",
+          " end",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          "minent",
+          " toilet",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          "kin",
+          " sofa",
+          " ground",
+          " ground",
+          " ground"
+        ],
+        [
+          " cat",
+          " stair",
+          " floor",
+          " floor",
+          " floor"
+        ]
+      ]
+    }
+  },
+  "topk_tokens": {
+    "fig1": [
+      [
+        [
+          ",",
+          "-",
+          " and",
+          ".",
+          " in"
+        ],
+        [
+          " a",
+          " other",
+          " whole",
+          " most",
+          " \ufffd"
+        ],
+        [
+          " the",
+          ",",
+          " a",
+          " and",
+          "-"
+        ],
+        [
+          " a",
+          " other",
+          " the",
+          " \ufffd",
+          " an"
+        ],
+        [
+          " a",
+          " other",
+          " the",
+          " \ufffd",
+          " an"
+        ]
+      ],
+      [
+        [
+          " the",
+          " a",
+          ",",
+          " of",
+          " and"
+        ],
+        [
+          "oes",
+          "ery",
+          "pt",
+          "bl",
+          "less"
+        ],
+        [
+          " a",
+          " the",
+          " an",
+          " other",
+          " \ufffd"
+        ],
+        [
+          " a",
+          " the",
+          " an",
+          " other",
+          " \ufffd"
+        ],
+        [
+          " a",
+          " the",
+          " an",
+          " other",
+          " \ufffd"
+        ]
+      ],
+      [
+        [
+          " of",
+          " the",
+          " a",
+          " that",
+          " not"
+        ],
+        [
+          " elector",
+          "riages",
+          "ress",
+          "cised",
+          " Malfoy"
+        ],
+        [
+          " a",
+          " the",
+          " an",
+          " other",
+          " \ufffd"
+        ],
+        [
+          " a",
+          " the",
+          " an",
+          " other",
+          " \ufffd"
+        ],
+        [
+          " a",
+          " the",
+          " an",
+          " other",
+          " \ufffd"
+        ]
+      ],
+      [
+        [
+          "venge",
+          " Awakens",
+          " punishable",
+          "uces",
+          " propell"
+        ],
+        [
+          "ming",
+          "ft",
+          "hog",
+          " deported",
+          "pelled"
+        ],
+        [
+          " a",
+          " the",
+          " an",
+          " \ufffd",
+          " more"
+        ],
+        [
+          " a",
+          " the",
+          " an",
+          " \ufffd",
+          " other"
+        ],
+        [
+          " a",
+          " the",
+          " an",
+          " \ufffd",
+          " other"
+        ]
+      ],
+      [
+        [
+          "uous",
+          "venge",
+          "ards",
+          " \u00b1",
+          "wide"
+        ],
+        [
+          " trusts",
+          " fibers",
+          "render",
+          "faces",
+          "odor"
+        ],
+        [
+          " a",
+          " the",
+          " an",
+          " \ufffd",
+          " long"
+        ],
+        [
+          " a",
+          " \ufffd",
+          " other",
+          " the",
+          " an"
+        ],
+        [
+          " a",
+          " \ufffd",
+          " other",
+          " the",
+          " an"
+        ]
+      ],
+      [
+        [
+          "\ufffd",
+          " in",
+          " a",
+          " the",
+          " \ufffd"
+        ],
+        [
+          "l",
+          "t",
+          ".",
+          " DC",
+          " D"
+        ],
+        [
+          " a",
+          " \ufffd",
+          " the",
+          " an",
+          " long"
+        ],
+        [
+          " a",
+          " \ufffd",
+          " the",
+          " an",
+          " other"
+        ],
+        [
+          " a",
+          " \ufffd",
+          " the",
+          " an",
+          " other"
+        ]
+      ],
+      [
+        [
+          " \ufffd",
+          "\ufffd",
+          " old",
+          " strong",
+          " a"
+        ],
+        [
+          ".",
+          ",",
+          " and",
+          "...",
+          " C"
+        ],
+        [
+          " a",
+          " \ufffd",
+          " the",
+          " an",
+          " long"
+        ],
+        [
+          " a",
+          " \ufffd",
+          " the",
+          " an",
+          ","
+        ],
+        [
+          " a",
+          " \ufffd",
+          " the",
+          " an",
+          ","
+        ]
+      ],
+      [
+        [
+          "TRY",
+          "ringe",
+          "esthes",
+          "IUM",
+          "\u2026)"
+        ],
+        [
+          ".",
+          " and",
+          ",",
+          "-",
+          " in"
+        ],
+        [
+          " a",
+          " \ufffd",
+          " an",
+          " the",
+          " long"
+        ],
+        [
+          " a",
+          " \ufffd",
+          " an",
+          " the",
+          " long"
+        ],
+        [
+          " a",
+          " \ufffd",
+          " an",
+          " the",
+          " long"
+        ]
+      ],
+      [
+        [
+          " of",
+          "hest",
+          " portion",
+          " aspect",
+          "iest"
+        ],
+        [
+          ",",
+          "-",
+          " and",
+          " in",
+          "."
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " an",
+          " long"
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " an",
+          " long"
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " an",
+          " long"
+        ]
+      ],
+      [
+        [
+          " and",
+          " of",
+          ",",
+          " five",
+          " week"
+        ],
+        [
+          "-",
+          ".",
+          ",",
+          " very",
+          " new"
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " an",
+          " right"
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " an",
+          ","
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " an",
+          ","
+        ]
+      ],
+      [
+        [
+          " side",
+          " section",
+          " window",
+          " yesterday",
+          " curve"
+        ],
+        [
+          " and",
+          " in",
+          "-",
+          " or",
+          "\ufffd"
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " an",
+          " long"
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " an",
+          " and"
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " an",
+          " and"
+        ]
+      ],
+      [
+        [
+          " corner",
+          " side",
+          " night",
+          " table",
+          " and"
+        ],
+        [
+          "\ufffd",
+          " present",
+          " in",
+          "s",
+          "-"
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " and",
+          ","
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " and",
+          ","
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " and",
+          ","
+        ]
+      ],
+      [
+        [
+          " his",
+          " himself",
+          " and",
+          " 11",
+          ","
+        ],
+        [
+          " Fifa",
+          " Sniper",
+          " Wrest",
+          "terday",
+          "iae"
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " and",
+          ","
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " and",
+          ","
+        ],
+        [
+          " \ufffd",
+          " a",
+          " the",
+          " and",
+          ","
+        ]
+      ],
+      [
+        [
+          " basis",
+          " eve",
+          " but",
+          " Tuesday",
+          " yesterday"
+        ],
+        [
+          " Summon",
+          " Masquerade",
+          " Tanks",
+          " Wrest",
+          " Cursed"
+        ],
+        [
+          " \ufffd",
+          " a",
+          " first",
+          " and",
+          " right"
+        ],
+        [
+          " \ufffd",
+          " right",
+          " first",
+          " a",
+          " two"
+        ],
+        [
+          " \ufffd",
+          " right",
+          " first",
+          " a",
+          " two"
+        ]
+      ],
+      [
+        [
+          "aping",
+          "aps",
+          " dormant",
+          " pile",
+          " Sunrise"
+        ],
+        [
+          " knockout",
+          " Masquerade",
+          " thrott",
+          " hars",
+          " brunt"
+        ],
+        [
+          " \ufffd",
+          " right",
+          " first",
+          " same",
+          " in"
+        ],
+        [
+          " \ufffd",
+          " same",
+          " right",
+          " first",
+          " most"
+        ],
+        [
+          " \ufffd",
+          " same",
+          " right",
+          " first",
+          " most"
+        ]
+      ],
+      [
+        [
+          " and",
+          " or",
+          " one",
+          " day",
+          " course"
+        ],
+        [
+          " adaptations",
+          " extinct",
+          " bip",
+          "valid",
+          " versa"
+        ],
+        [
+          " \ufffd",
+          " right",
+          " same",
+          " first",
+          " most"
+        ],
+        [
+          " \ufffd",
+          " right",
+          " same",
+          " first",
+          " most"
+        ],
+        [
+          " \ufffd",
+          " right",
+          " same",
+          " first",
+          " most"
+        ]
+      ],
+      [
+        [
+          " side",
+          " floor",
+          " he",
+          " ground",
+          " night"
+        ],
+        [
+          "ip",
+          "ets",
+          "het",
+          "enter",
+          " top"
+        ],
+        [
+          " \ufffd",
+          " right",
+          " same",
+          " side",
+          " first"
+        ],
+        [
+          " same",
+          " right",
+          " \ufffd",
+          " first",
+          " other"
+        ],
+        [
+          " same",
+          " right",
+          " \ufffd",
+          " first",
+          " other"
+        ]
+      ],
+      [
+        [
+          "\ufffd",
+          ",",
+          ".",
+          " for",
+          " and"
+        ],
+        [
+          "iar",
+          "pires",
+          "itar",
+          "impl",
+          "'),"
+        ],
+        [
+          " \ufffd",
+          " same",
+          " right",
+          ",",
+          " first"
+        ],
+        [
+          " same",
+          " \ufffd",
+          " first",
+          " right",
+          " most"
+        ],
+        [
+          " same",
+          " \ufffd",
+          " first",
+          " right",
+          " most"
+        ]
+      ],
+      [
+        [
+          " behind",
+          " Behind",
+          " its",
+          "\u00ad",
+          " of"
+        ],
+        [
+          " refers",
+          " puzzles",
+          " improperly",
+          " ens",
+          " propose"
+        ],
+        [
+          " same",
+          " \ufffd",
+          " right",
+          " first",
+          " side"
+        ],
+        [
+          " same",
+          " \ufffd",
+          " top",
+          " right",
+          " first"
+        ],
+        [
+          " same",
+          " \ufffd",
+          " top",
+          " right",
+          " first"
+        ]
+      ],
+      [
+        [
+          " two",
+          " a",
+          " one",
+          " several",
+          " this"
+        ],
+        [
+          " wrong",
+          " verge",
+          " Ltd",
+          "dogs",
+          " LLC"
+        ],
+        [
+          " same",
+          " \ufffd",
+          " right",
+          " top",
+          " most"
+        ],
+        [
+          " same",
+          " first",
+          " top",
+          " right",
+          " front"
+        ],
+        [
+          " same",
+          " first",
+          " top",
+          " right",
+          " front"
+        ]
+      ],
+      [
+        [
+          " she",
+          " her",
+          " were",
+          ".",
+          " was"
+        ],
+        [
+          "ton",
+          " roof",
+          " employees",
+          " community",
+          " forth"
+        ],
+        [
+          " first",
+          " right",
+          " same",
+          " top",
+          " front"
+        ],
+        [
+          " first",
+          " top",
+          " right",
+          " same",
+          " front"
+        ],
+        [
+          " first",
+          " top",
+          " right",
+          " same",
+          " front"
+        ]
+      ],
+      [
+        [
+          " his",
+          " her",
+          " he",
+          " she",
+          " him"
+        ],
+        [
+          "-",
+          "\n",
+          "i",
+          " edge",
+          " A"
+        ],
+        [
+          " first",
+          " top",
+          " front",
+          " same",
+          " right"
+        ],
+        [
+          " top",
+          " first",
+          " ground",
+          " right",
+          " front"
+        ],
+        [
+          " top",
+          " first",
+          " ground",
+          " right",
+          " front"
+        ]
+      ],
+      [
+        [
+          "\n",
+          " the",
+          " and",
+          " on",
+          "..."
+        ],
+        [
+          "ices",
+          "it",
+          "ats",
+          "ens",
+          " leverage"
+        ],
+        [
+          " top",
+          " first",
+          " ground",
+          " right",
+          " front"
+        ],
+        [
+          " top",
+          " ground",
+          " first",
+          " right",
+          " front"
+        ],
+        [
+          " top",
+          " ground",
+          " first",
+          " right",
+          " front"
+        ]
+      ],
+      [
+        [
+          " side",
+          "\ufffd",
+          "'s",
+          " front",
+          " on"
+        ],
+        [
+          " other",
+          " side",
+          " front",
+          " bed",
+          " downside"
+        ],
+        [
+          " ground",
+          " top",
+          " front",
+          " right",
+          " first"
+        ],
+        [
+          " ground",
+          " top",
+          " front",
+          " side",
+          " other"
+        ],
+        [
+          " ground",
+          " top",
+          " front",
+          " side",
+          " other"
+        ]
+      ],
+      [
+        [
+          " likely",
+          " next",
+          ").",
+          ")",
+          " play"
+        ],
+        [
+          " shores",
+          " corner",
+          " roof",
+          " hind",
+          " verge"
+        ],
+        [
+          " ground",
+          " top",
+          " front",
+          " side",
+          " right"
+        ],
+        [
+          " ground",
+          " front",
+          " top",
+          " side",
+          " back"
+        ],
+        [
+          " ground",
+          " front",
+          " top",
+          " side",
+          " back"
+        ]
+      ],
+      [
+        [
+          " her",
+          " she",
+          " the",
+          ",",
+          " at"
+        ],
+        [
+          "-",
+          "\ufffd",
+          " top",
+          " back",
+          " bed"
+        ],
+        [
+          " ground",
+          " front",
+          " top",
+          " side",
+          " back"
+        ],
+        [
+          " ground",
+          " top",
+          " front",
+          " back",
+          " side"
+        ],
+        [
+          " ground",
+          " top",
+          " front",
+          " back",
+          " side"
+        ]
+      ],
+      [
+        [
+          " \"",
+          " '",
+          "...",
+          "\n",
+          " -"
+        ],
+        [
+          " \ufffd",
+          " ground",
+          " of",
+          ",",
+          " and"
+        ],
+        [
+          " ground",
+          " top",
+          " front",
+          " back",
+          " side"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " front",
+          " side"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " front",
+          " side"
+        ]
+      ],
+      [
+        [
+          " the",
+          " only",
+          " cut",
+          "\ufffd",
+          " last"
+        ],
+        [
+          " in",
+          " by",
+          " to",
+          " is",
+          " or"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " front",
+          " side"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " front",
+          " side"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " front",
+          " side"
+        ]
+      ],
+      [
+        [
+          "\n",
+          "<|endoftext|>",
+          " he",
+          " his",
+          " He"
+        ],
+        [
+          " steps",
+          " floor",
+          " carpet",
+          " further",
+          " end"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " front",
+          " side"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " side",
+          " other"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " side",
+          " other"
+        ]
+      ],
+      [
+        [
+          " pet",
+          " canine",
+          " dog",
+          " veterinary",
+          " pets"
+        ],
+        [
+          " large",
+          " stem",
+          " light",
+          " m",
+          " lot"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " other",
+          " side"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " other",
+          " side"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " other",
+          " side"
+        ]
+      ],
+      [
+        [
+          " cat",
+          " cats",
+          " Cat",
+          " pet",
+          " Pet"
+        ],
+        [
+          " sofa",
+          " ledge",
+          " couch",
+          " mant",
+          " reins"
+        ],
+        [
+          " ground",
+          " top",
+          " other",
+          " back",
+          " side"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " other",
+          " floor"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " other",
+          " floor"
+        ]
+      ],
+      [
+        [
+          " $",
+          " ($",
+          " table",
+          " case",
+          " tables"
+        ],
+        [
+          " ledge",
+          " tripod",
+          " rug",
+          " stret",
+          " sofa"
+        ],
+        [
+          " ground",
+          " top",
+          " back",
+          " other",
+          " floor"
+        ],
+        [
+          " ground",
+          " top",
+          " other",
+          " floor",
+          " back"
+        ],
+        [
+          " ground",
+          " top",
+          " other",
+          " floor",
+          " back"
+        ]
+      ],
+      [
+        [
+          " cats",
+          " cat",
+          " dog",
+          " dogs",
+          " canine"
+        ],
+        [
+          " end",
+          " market",
+          " sofa",
+          " rug",
+          " fountain"
+        ],
+        [
+          " ground",
+          " top",
+          " floor",
+          " other",
+          " back"
+        ],
+        [
+          " ground",
+          " other",
+          " floor",
+          " top",
+          " back"
+        ],
+        [
+          " ground",
+          " other",
+          " floor",
+          " top",
+          " back"
+        ]
+      ],
+      [
+        [
+          "minent",
+          "otle",
+          " Jindal",
+          "thens",
+          " mosquit"
+        ],
+        [
+          " toilet",
+          " bar",
+          " window",
+          " w",
+          " ledge"
+        ],
+        [
+          " ground",
+          " other",
+          " floor",
+          " top",
+          " back"
+        ],
+        [
+          " ground",
+          " other",
+          " floor",
+          " top",
+          " back"
+        ],
+        [
+          " ground",
+          " other",
+          " floor",
+          " top",
+          " back"
+        ]
+      ],
+      [
+        [
+          "kin",
+          " I",
+          "ky",
+          "iot",
+          "my"
+        ],
+        [
+          " sofa",
+          " balcony",
+          " patio",
+          " stairs",
+          " porch"
+        ],
+        [
+          " ground",
+          " other",
+          " floor",
+          " top",
+          " back"
+        ],
+        [
+          " ground",
+          " floor",
+          " edge",
+          " bed",
+          " back"
+        ],
+        [
+          " ground",
+          " floor",
+          " edge",
+          " bed",
+          " back"
+        ]
+      ],
+      [
+        [
+          " cat",
+          " cats",
+          " Cat",
+          " kittens",
+          " kitten"
+        ],
+        [
+          " stair",
+          " recl",
+          " squats",
+          " courtyard",
+          " dungeon"
+        ],
+        [
+          " floor",
+          " ground",
+          " edge",
+          " bed",
+          " other"
+        ],
+        [
+          " floor",
+          " ground",
+          " couch",
+          " edge",
+          " bed"
+        ],
+        [
+          " floor",
+          " ground",
+          " couch",
+          " edge",
+          " bed"
+        ]
+      ]
+    ]
+  }
+}
