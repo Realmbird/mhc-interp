@@ -51,6 +51,10 @@ MODELS = [
 # How many top heads to surface in top_heads.json + summary.csv.
 TOP_K = 20
 
+# Models for which we also run an ablation cross-check on the pattern detectors.
+# Residual is excluded by user request — pattern is sufficient for the baseline.
+ABLATION_FOR_PATTERN_MODELS = {"mhc", "mhc_lite"}
+
 
 # %% ---------- Probe construction ----------
 def _ids(text: str, prepend_eot: bool = False) -> list[int]:
@@ -275,6 +279,49 @@ def ablation_grid(
     return baseline_t, out
 
 
+@torch.no_grad()
+def _nll_at_positions(model, ids: list[int], positions: list[int] | None) -> float:
+    """Cross-entropy of next-token prediction at the given positions (or all
+    positions when `positions` is None). Returns mean nats.
+
+    `positions` are query positions i — predictions at i target token ids[i+1].
+    """
+    x = torch.tensor([ids], dtype=torch.long, device=device)
+    logits, _ = model(x, torch.zeros_like(x))  # `targets=...` makes the model
+                                                  # return per-position logits
+    log_p = F.log_softmax(logits, dim=-1)         # (1, T, V)
+    targets = x[:, 1:]                            # (1, T-1)
+    log_p_pred = log_p[:, :-1, :]                 # (1, T-1, V)
+    nll = -log_p_pred.gather(-1, targets.unsqueeze(-1)).squeeze(-1)  # (1, T-1)
+    if positions is not None:
+        valid = [p for p in positions if 0 <= p < nll.shape[1]]
+        nll = nll[:, valid]
+    return float(nll.mean().item())
+
+
+@torch.no_grad()
+def ablation_nll_grid(
+    model,
+    cfg,
+    ids: list[int],
+    positions: list[int] | None = None,
+) -> tuple[float, np.ndarray]:
+    """For each (L, H) ablate the head and compute NLL at the given positions.
+
+    Returns (baseline_nll, ablated_nll[L, H]). Δ = ablated - baseline > 0
+    means the head's contribution lowered NLL ⇒ head was useful.
+    """
+    L, H = cfg.n_layer, cfg.n_head
+    hs = cfg.n_embd // H
+    baseline = _nll_at_positions(model, ids, positions)
+    out = np.zeros((L, H), dtype=np.float32)
+    for li in range(L):
+        for hi in range(H):
+            with ablate_head(model, li, hi, hs):
+                out[li, hi] = _nll_at_positions(model, ids, positions)
+    return baseline, out
+
+
 # %% ---------- Output writers ----------
 def _write_top_heads(scores: np.ndarray, out_path: Path, k: int = TOP_K, **extra_cols) -> list[dict]:
     """scores: (L, H). Writes top_heads.json with the K heads of largest score."""
@@ -373,8 +420,65 @@ def run_pattern_probe(slug: str, spec: dict, model, cfg, name: str, repo_id: str
     else:
         raise ValueError(f"unknown pattern probe: {slug}")
 
-    _write_scores_csv(out_dir / "scores.csv", scores)
-    top = _write_top_heads(scores, out_dir / "top_heads.json")
+    extras: dict[str, np.ndarray] = {}
+    combined_score = None
+    if name in ABLATION_FOR_PATTERN_MODELS:
+        # Pick the ablation task that matches this detector's mechanism:
+        # prev-token: NLL on the natural-text probe (general LM-loss signal).
+        # induction:  NLL at second-half positions of [EOT]+R+R (Olsson §3.4).
+        # duplicate:  same probe as induction (DT and IH share the underlying
+        #             repeated-sequence task; pattern is what separates them).
+        if slug == "prev_token":
+            ablation_ids = probe["ids"]
+            positions = None  # average over all next-token positions
+        else:
+            # synthetic [EOT]+R+R built earlier; positions to score are the
+            # second-half query positions (i.e. predicting tokens at
+            # second_offset+1 .. T-1 from the residual at second_offset .. T-2).
+            n = probe["n"]
+            second_off = probe["second_offset"]
+            T_probe = len(probe["ids"])
+            ablation_ids = probe["ids"]
+            positions = list(range(second_off, T_probe - 1))
+
+        baseline_nll, ablated_nll = ablation_nll_grid(
+            model, cfg, ablation_ids, positions
+        )
+        delta_nll = ablated_nll - baseline_nll  # >0 ⇒ head was useful
+        extras["pattern_score"] = scores
+        extras["ablation_baseline_nll"] = np.full_like(scores, baseline_nll)
+        extras["ablation_nll"] = ablated_nll.astype(np.float32)
+        extras["ablation_delta_nll"] = delta_nll.astype(np.float32)
+        # Combined score: each ranked separately to a percentile in [0, 1]
+        # (1 = best). Take the *minimum* of the two percentiles — i.e., a head
+        # is high-combined only when high in BOTH pattern AND ablation.
+        def _pct_rank(M: np.ndarray) -> np.ndarray:
+            flat = M.flatten()
+            order = flat.argsort()
+            r = np.empty_like(order, dtype=np.float32)
+            r[order] = np.arange(len(order), dtype=np.float32)
+            return (r / max(len(flat) - 1, 1)).reshape(M.shape)
+        pat_pct = _pct_rank(scores)
+        abl_pct = _pct_rank(delta_nll)
+        combined_score = np.minimum(pat_pct, abl_pct)  # ∈ [0, 1]
+        extras["pattern_pct"] = pat_pct
+        extras["ablation_pct"] = abl_pct
+        extras["combined_pct"] = combined_score
+
+    # Write the CSV. Primary `score` column is the pattern score (preserved for
+    # back-compat with multi_role_analysis that reads {slug}_score columns).
+    _write_scores_csv(out_dir / "scores.csv", scores, extras)
+
+    # top_heads.json: ranked by combined score when available, else by pattern.
+    if combined_score is not None:
+        top = _write_top_heads(
+            combined_score, out_dir / "top_heads.json",
+            pattern_score=scores, ablation_delta_nll=delta_nll.astype(np.float32),
+        )
+        # Also keep a pattern-only ranking on disk for inspection.
+        _write_top_heads(scores, out_dir / "top_heads_pattern_only.json")
+    else:
+        top = _write_top_heads(scores, out_dir / "top_heads.json")
     return scores, top
 
 

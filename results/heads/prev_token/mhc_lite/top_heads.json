@@ -3,120 +3,160 @@
     "rank": 1,
     "layer": 7,
     "head": 14,
-    "score": 0.9970703125
+    "score": 0.9972183704376221,
+    "pattern_score": 0.9970703125,
+    "ablation_delta_nll": 0.09214282035827637
   },
   {
     "rank": 2,
-    "layer": 7,
-    "head": 1,
-    "score": 0.8427734375
+    "layer": 8,
+    "head": 14,
+    "score": 0.9819193482398987,
+    "pattern_score": 0.416748046875,
+    "ablation_delta_nll": 0.1793818473815918
   },
   {
     "rank": 3,
-    "layer": 7,
-    "head": 3,
-    "score": 0.78125
+    "layer": 6,
+    "head": 18,
+    "score": 0.9791377186775208,
+    "pattern_score": 0.4072265625,
+    "ablation_delta_nll": 0.03175497055053711
   },
   {
     "rank": 4,
     "layer": 6,
-    "head": 4,
-    "score": 0.734375
+    "head": 1,
+    "score": 0.9735743999481201,
+    "pattern_score": 0.4892578125,
+    "ablation_delta_nll": 0.025338172912597656
   },
   {
     "rank": 5,
-    "layer": 6,
-    "head": 8,
-    "score": 0.53271484375
+    "layer": 7,
+    "head": 1,
+    "score": 0.9610570073127747,
+    "pattern_score": 0.8427734375,
+    "ablation_delta_nll": 0.014391899108886719
   },
   {
     "rank": 6,
-    "layer": 6,
-    "head": 1,
-    "score": 0.4892578125
+    "layer": 2,
+    "head": 7,
+    "score": 0.9568845629692078,
+    "pattern_score": 0.28564453125,
+    "ablation_delta_nll": 0.04262876510620117
   },
   {
     "rank": 7,
     "layer": 7,
-    "head": 4,
-    "score": 0.485107421875
+    "head": 13,
+    "score": 0.9513213038444519,
+    "pattern_score": 0.32861328125,
+    "ablation_delta_nll": 0.011411190032958984
   },
   {
     "rank": 8,
-    "layer": 7,
-    "head": 15,
-    "score": 0.468505859375
+    "layer": 11,
+    "head": 9,
+    "score": 0.9485396146774292,
+    "pattern_score": 0.273681640625,
+    "ablation_delta_nll": 0.0590367317199707
   },
   {
     "rank": 9,
-    "layer": 11,
-    "head": 19,
-    "score": 0.458984375
+    "layer": 6,
+    "head": 4,
+    "score": 0.9374130964279175,
+    "pattern_score": 0.734375,
+    "ablation_delta_nll": 0.009680032730102539
   },
   {
     "rank": 10,
-    "layer": 6,
-    "head": 16,
-    "score": 0.447509765625
+    "layer": 5,
+    "head": 1,
+    "score": 0.924895703792572,
+    "pattern_score": 0.251220703125,
+    "ablation_delta_nll": 0.010793209075927734
   },
   {
     "rank": 11,
-    "layer": 8,
+    "layer": 1,
     "head": 13,
-    "score": 0.4453125
+    "score": 0.9179415702819824,
+    "pattern_score": 0.28564453125,
+    "ablation_delta_nll": 0.0073626041412353516
   },
   {
     "rank": 12,
-    "layer": 6,
-    "head": 3,
-    "score": 0.435302734375
+    "layer": 9,
+    "head": 6,
+    "score": 0.9137691259384155,
+    "pattern_score": 0.278076171875,
+    "ablation_delta_nll": 0.00709986686706543
   },
   {
     "rank": 13,
-    "layer": 0,
-    "head": 16,
-    "score": 0.423095703125
+    "layer": 5,
+    "head": 18,
+    "score": 0.905424177646637,
+    "pattern_score": 0.236572265625,
+    "ablation_delta_nll": 0.007977008819580078
   },
   {
     "rank": 14,
-    "layer": 8,
-    "head": 14,
-    "score": 0.416748046875
+    "layer": 12,
+    "head": 16,
+    "score": 0.9012517333030701,
+    "pattern_score": 0.2347412109375,
+    "ablation_delta_nll": 0.006335020065307617
   },
   {
     "rank": 15,
     "layer": 11,
-    "head": 2,
-    "score": 0.411376953125
+    "head": 6,
+    "score": 0.8942976593971252,
+    "pattern_score": 0.2626953125,
+    "ablation_delta_nll": 0.005290508270263672
   },
   {
     "rank": 16,
     "layer": 6,
-    "head": 18,
-    "score": 0.4072265625
+    "head": 19,
+    "score": 0.8929068446159363,
+    "pattern_score": 0.2333984375,
+    "ablation_delta_nll": 0.005229473114013672
   },
   {
     "rank": 17,
-    "layer": 7,
-    "head": 11,
-    "score": 0.38330078125
+    "layer": 14,
+    "head": 5,
+    "score": 0.8915159702301025,
+    "pattern_score": 0.2587890625,
+    "ablation_delta_nll": 0.005223274230957031
   },
   {
     "rank": 18,
-    "layer": 6,
-    "head": 9,
-    "score": 0.379150390625
+    "layer": 7,
+    "head": 17,
+    "score": 0.8859527111053467,
+    "pattern_score": 0.29296875,
+    "ablation_delta_nll": 0.004810810089111328
   },
   {
     "rank": 19,
-    "layer": 7,
-    "head": 2,
-    "score": 0.347412109375
+    "layer": 11,
+    "head": 19,
+    "score": 0.8831710815429688,
+    "pattern_score": 0.458984375,
+    "ablation_delta_nll": 0.004696846008300781
   },
   {
     "rank": 20,
-    "layer": 7,
-    "head": 19,
-    "score": 0.346923828125
+    "layer": 9,
+    "head": 12,
+    "score": 0.8720445036888123,
+    "pattern_score": 0.2237548828125,
+    "ablation_delta_nll": 0.00428462028503418
   }
 ]

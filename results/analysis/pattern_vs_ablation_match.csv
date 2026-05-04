@@ -1,0 +1,5 @@
+detector,model,pearson,top10_x_top10,top10_x_top20,top10_x_top50
+induction,mhc,0.45575634825911937,6,9,10
+induction,mhc_lite,0.23897864665632507,3,5,10
+prev_token,mhc,0.015307811122042042,0,1,1
+prev_token,mhc_lite,0.10667912725151345,1,2,4

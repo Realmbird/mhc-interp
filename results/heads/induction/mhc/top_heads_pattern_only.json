@@ -1,0 +1,122 @@
+[
+  {
+    "rank": 1,
+    "layer": 7,
+    "head": 17,
+    "score": 0.92041015625
+  },
+  {
+    "rank": 2,
+    "layer": 7,
+    "head": 8,
+    "score": 0.85986328125
+  },
+  {
+    "rank": 3,
+    "layer": 7,
+    "head": 3,
+    "score": 0.853515625
+  },
+  {
+    "rank": 4,
+    "layer": 9,
+    "head": 5,
+    "score": 0.81982421875
+  },
+  {
+    "rank": 5,
+    "layer": 9,
+    "head": 11,
+    "score": 0.79931640625
+  },
+  {
+    "rank": 6,
+    "layer": 9,
+    "head": 8,
+    "score": 0.79638671875
+  },
+  {
+    "rank": 7,
+    "layer": 9,
+    "head": 19,
+    "score": 0.76806640625
+  },
+  {
+    "rank": 8,
+    "layer": 9,
+    "head": 1,
+    "score": 0.7431640625
+  },
+  {
+    "rank": 9,
+    "layer": 9,
+    "head": 10,
+    "score": 0.73193359375
+  },
+  {
+    "rank": 10,
+    "layer": 9,
+    "head": 3,
+    "score": 0.73046875
+  },
+  {
+    "rank": 11,
+    "layer": 9,
+    "head": 0,
+    "score": 0.72509765625
+  },
+  {
+    "rank": 12,
+    "layer": 9,
+    "head": 14,
+    "score": 0.6923828125
+  },
+  {
+    "rank": 13,
+    "layer": 7,
+    "head": 15,
+    "score": 0.6171875
+  },
+  {
+    "rank": 14,
+    "layer": 10,
+    "head": 13,
+    "score": 0.61083984375
+  },
+  {
+    "rank": 15,
+    "layer": 9,
+    "head": 16,
+    "score": 0.44921875
+  },
+  {
+    "rank": 16,
+    "layer": 9,
+    "head": 18,
+    "score": 0.414306640625
+  },
+  {
+    "rank": 17,
+    "layer": 10,
+    "head": 1,
+    "score": 0.40087890625
+  },
+  {
+    "rank": 18,
+    "layer": 9,
+    "head": 13,
+    "score": 0.385986328125
+  },
+  {
+    "rank": 19,
+    "layer": 7,
+    "head": 19,
+    "score": 0.369140625
+  },
+  {
+    "rank": 20,
+    "layer": 10,
+    "head": 9,
+    "score": 0.3623046875
+  }
+]

@@ -44,17 +44,34 @@ TOP_K = 10
 MULTI_ROLE_MIN = 2
 
 
-def load_scores(model: str) -> dict[str, np.ndarray]:
-    """Returns {detector: scores (L, H)}."""
-    out = {}
+def load_scores(model: str) -> tuple[dict[str, np.ndarray], dict[str, np.ndarray | None]]:
+    """Returns (display_scores, top_k_scores) per detector.
+
+    `display_scores`: what we annotate on the heatmap (raw pattern / ablation Δ).
+    `top_k_scores`:   what we use to determine "is this head top-K?".
+
+    For the three pattern detectors (prev_token, induction, duplicate) when the
+    model is mhc / mhc_lite, the scores.csv now also has a `combined_pct`
+    column = min(pattern_pct, ablation_pct) — a head is top-K-combined only if
+    it ranks high in BOTH pattern AND ablation. Use that for top-K. Residual
+    has no ablation data → falls back to pattern score.
+    """
+    display = {}
+    rank_by = {}
     for det in DETECTORS:
         df = pd.read_csv(HEADS_ROOT / det / model / "scores.csv")
         L = int(df["layer"].max()) + 1
         H = int(df["head"].max()) + 1
         S = np.zeros((L, H), dtype=np.float32)
         S[df["layer"].to_numpy(), df["head"].to_numpy()] = df["score"].to_numpy()
-        out[det] = S
-    return out
+        display[det] = S
+        if "combined_pct" in df.columns:
+            C = np.zeros((L, H), dtype=np.float32)
+            C[df["layer"].to_numpy(), df["head"].to_numpy()] = df["combined_pct"].to_numpy()
+            rank_by[det] = C
+        else:
+            rank_by[det] = S  # fall back to pattern / ablation Δ
+    return display, rank_by
 
 
 def percentile_rank(M: np.ndarray) -> np.ndarray:
@@ -77,11 +94,15 @@ def top_k_heads(scores: np.ndarray, k: int) -> set[tuple[int, int]]:
 
 def per_head_role_table(model: str) -> pd.DataFrame:
     """One row per (layer, head). Columns: raw score and percentile per detector,
-    role count under TOP_K, plus role membership flags."""
-    scores = load_scores(model)
+    role count under TOP_K, plus role membership flags.
+
+    Top-K membership uses the *combined* (pattern AND ablation) score where
+    available; otherwise falls back to pattern score.
+    """
+    scores, rank_by = load_scores(model)
     L, H = scores[DETECTORS[0]].shape
     pct = {d: percentile_rank(s) for d, s in scores.items()}
-    top_sets = {d: top_k_heads(s, TOP_K) for d, s in scores.items()}
+    top_sets = {d: top_k_heads(rank_by[d], TOP_K) for d in DETECTORS}
 
     rows = []
     for li in range(L):

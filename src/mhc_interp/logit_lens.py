@@ -54,11 +54,26 @@ MODELS = [
 def make_lens(model):
     @torch.no_grad()
     def lens(x: torch.Tensor) -> torch.Tensor:
+        """Plain lens: lm_head(ln_f(x)). Use for branch outputs (single mixed view)."""
         return model.lm_head(model.transformer.ln_f(x))
 
     @torch.no_grad()
-    def topk(x: torch.Tensor, k: int = 1, position: int = -1):
-        logits = lens(x)
+    def lens_streams(streams_BSTD: torch.Tensor, indices) -> torch.Tensor:
+        """Model-faithful lens over a subset of streams.
+
+        streams_BSTD: (B, S, T, D). For each stream in `indices`, apply ln_f,
+        then sum the normalised streams, then unembed. Matches the model's own
+        final flow: `lm_head(reduce_stream(ln_f(x)))`.
+        """
+        selected = streams_BSTD[:, list(indices)]  # (B, |idx|, T, D)
+        B, num, T, D = selected.shape
+        flat = selected.reshape(B * num, T, D)
+        normed = model.transformer.ln_f(flat).reshape(B, num, T, D)
+        summed = normed.sum(dim=1)  # (B, T, D)
+        return model.lm_head(summed)
+
+    @torch.no_grad()
+    def topk_from_logits(logits: torch.Tensor, k: int = 1, position: int = -1):
         if logits.dim() == 3:
             logits = logits[0, position]
         else:
@@ -67,7 +82,7 @@ def make_lens(model):
         p, ix = probs.topk(k, dim=-1)
         return ix.cpu().tolist(), p.cpu().tolist()
 
-    return lens, topk
+    return lens, lens_streams, topk_from_logits
 
 
 def split_streams(x: torch.Tensor, S: int) -> torch.Tensor:
@@ -79,9 +94,10 @@ def split_streams(x: torch.Tensor, S: int) -> torch.Tensor:
 
 
 # %% Figure builder
-def build_matrix(L, column_specs, topk, K: int = 5):
-    """For each layer × view, store top-1 prob + token (for the heatmap) and
-    top-K ids/probs (for the Streamlit drill-down)."""
+def build_matrix(L, column_specs, topk_from_logits, K: int = 5):
+    """Each column spec is (label, fn). fn(layer_i) returns precomputed logits
+    (B, T, V) under the model-faithful lens for that view. We then take top-K
+    at the last sequence position."""
     C = len(column_specs)
     probs = np.zeros((L, C), dtype=np.float32)
     tokens = [[""] * C for _ in range(L)]
@@ -89,8 +105,8 @@ def build_matrix(L, column_specs, topk, K: int = 5):
     topk_probs = np.zeros((L, C, K), dtype=np.float32)
     for layer_i in range(L):
         for c, (_, fn) in enumerate(column_specs):
-            x = fn(layer_i)
-            ids_, ps_ = topk(x, k=K)
+            logits = fn(layer_i)
+            ids_, ps_ = topk_from_logits(logits, k=K)
             probs[layer_i, c] = ps_[0]
             tokens[layer_i][c] = tok.decode([ids_[0]])
             topk_ids[layer_i, c] = ids_
@@ -160,17 +176,24 @@ def run_model(name: str, repo_id: str):
     for h in handles:
         h.remove()
 
-    _, topk = make_lens(model)
+    lens, lens_streams, topk_from_logits = make_lens(model)
     out_dir = RESULTS_ROOT / name
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # ---- Figure 1: branches + per-stream + sum-reduce
-    def col_attn(i):  return captures[(i, "attn_out")]
-    def col_mlp(i):   return captures[(i, "mlp_out")]
-    def col_reduce_attn(i): return split_streams(captures[(i, "post_attn")], S).sum(dim=1)
-    def col_reduce_mlp(i):  return split_streams(captures[(i, "post_mlp")],  S).sum(dim=1)
+    # ---- Column functions return LOGITS under the model-faithful lens.
+    # Branch outputs (single mixed view per layer) → plain lens(x).
+    # Stream sums / per-stream / subset-sums → lens_streams(streams, indices),
+    # which applies ln_f BEFORE summing (matches the model's reduce_stream).
+    def col_attn(i):  return lens(captures[(i, "attn_out")])
+    def col_mlp(i):   return lens(captures[(i, "mlp_out")])
+    def col_reduce_attn(i):
+        return lens_streams(split_streams(captures[(i, "post_attn")], S), range(S))
+    def col_reduce_mlp(i):
+        return lens_streams(split_streams(captures[(i, "post_mlp")], S),  range(S))
     def col_stream(s):
-        return lambda i, s=s: split_streams(captures[(i, "post_mlp")], S)[:, s]
+        return lambda i, s=s: lens_streams(
+            split_streams(captures[(i, "post_mlp")], S), [s]
+        )
 
     fig1_specs = [
         ("attn_out", col_attn),
@@ -181,7 +204,7 @@ def run_model(name: str, repo_id: str):
 
     figure_data = {}  # collected for the npz dump below
 
-    probs1, tokens1, labels1, ids1, p1 = build_matrix(L, fig1_specs, topk)
+    probs1, tokens1, labels1, ids1, p1 = build_matrix(L, fig1_specs, topk_from_logits)
     heatmap(
         probs1, tokens1, labels1,
         title=f"{name} ({repo_id}) — {PROMPT!r} | branches + per-stream",
@@ -196,16 +219,16 @@ def run_model(name: str, repo_id: str):
         sub_labels = ["{" + ",".join(map(str, c)) + "}" for c in subsets]
 
         def col_subset(stage, combo):
-            return lambda i, combo=combo, stage=stage: split_streams(
-                captures[(i, stage)], S
-            )[:, list(combo)].sum(dim=1)
+            return lambda i, combo=combo, stage=stage: lens_streams(
+                split_streams(captures[(i, stage)], S), list(combo)
+            )
 
         for stage, fname, suffix, key in [
             ("post_mlp",  "fig2_subsets_post_mlp.png",  "post-MLP",  "fig2"),
             ("post_attn", "fig3_subsets_post_attn.png", "post-ATTN", "fig3"),
         ]:
             specs = [(lbl, col_subset(stage, c)) for lbl, c in zip(sub_labels, subsets)]
-            probs, tokens, labels, ids_k, p_k = build_matrix(L, specs, topk)
+            probs, tokens, labels, ids_k, p_k = build_matrix(L, specs, topk_from_logits)
             heatmap(
                 probs, tokens, labels,
                 title=f"{name} ({repo_id}) — {PROMPT!r} | {suffix}, all stream subsets",
@@ -258,7 +281,7 @@ def run_model(name: str, repo_id: str):
         for layer_i in range(L):
             cells = []
             for spec_fn in (col_attn, col_mlp, *(col_stream(s) for s in range(S))):
-                ids_, ps_ = topk(spec_fn(layer_i), k=TOP_K)
+                ids_, ps_ = topk_from_logits(spec_fn(layer_i), k=TOP_K)
                 cell = " ".join(f"{repr(tok.decode([t]))[1:-1][:8]}({p:.2f})" for t, p in zip(ids_, ps_))
                 cells.append(cell[:28])
             f.write(f"{layer_i:>3} | " + " | ".join(f"{c:<28}" for c in cells) + "\n")

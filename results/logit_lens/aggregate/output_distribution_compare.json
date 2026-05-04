@@ -1,0 +1,39 @@
+{
+  "n_positions": 49920,
+  "corpus": "dolma",
+  "seq_len": 128,
+  "n_tokens_target": 50000,
+  "models": [
+    "residual",
+    "mhc",
+    "mhc_lite"
+  ],
+  "mean_entropy": {
+    "residual": 3.784060947711651,
+    "mhc": 3.7196091957581348,
+    "mhc_lite": 3.6773784172840607
+  },
+  "pairs": {
+    "residual__mhc": {
+      "KL(residual||mhc)_nats": 0.33334535421469275,
+      "KL(mhc||residual)_nats": 0.32250857001695876,
+      "JS_nats": 0.0690590330805534,
+      "TV": 0.2528237339777824,
+      "top1_agreement": 0.7364783653846154
+    },
+    "residual__mhc_lite": {
+      "KL(residual||mhc_lite)_nats": 0.32706516828292453,
+      "KL(mhc_lite||residual)_nats": 0.31481026456906247,
+      "JS_nats": 0.06785739755783325,
+      "TV": 0.24944527271466377,
+      "top1_agreement": 0.7382411858974359
+    },
+    "mhc__mhc_lite": {
+      "KL(mhc||mhc_lite)_nats": 0.24383403597733913,
+      "KL(mhc_lite||mhc)_nats": 0.24213447593725645,
+      "JS_nats": 0.05294164105867728,
+      "TV": 0.21717831240250515,
+      "top1_agreement": 0.7762820512820513
+    }
+  }
+}
